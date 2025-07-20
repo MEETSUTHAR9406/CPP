@@ -3,7 +3,7 @@ using namespace std;
 
 int main() {
 
-    // Primitive Data Types 
+    // Primitive Data Types  
 
     int age = 20;
     char grade = 'A';
