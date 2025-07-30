@@ -6,6 +6,7 @@ int main() {
     int num = 10;
     int i = 1;
 
+    // do-while loop will always run once, even if the condition is wrong.
     do {
         cout << i << " ";
         i++;
