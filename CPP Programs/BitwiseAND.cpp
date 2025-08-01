@@ -12,6 +12,9 @@ int main() {
     cin >> b;
 
     cout << (a & b) << endl;
+    
+    // Exercise
+    // cout << (6 & 10) << endl;
 
     return 0;
 }
