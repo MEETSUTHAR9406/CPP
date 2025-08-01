@@ -13,5 +13,8 @@ int main() {
 
     cout << (a | b) << endl;
 
+    // Exercise
+    // cout << (6 | 10) << endl; -==> 14
+
     return 0;   
 }
