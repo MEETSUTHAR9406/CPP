@@ -11,8 +11,8 @@ int main() {
         cin >> arr[i];
     }
 
-    int max = arr[0];
-    int min = arr[size - 1];
+    int max = arr[0]; // int max = __WINT_MIN__
+    int min = arr[size - 1]; // int min = __INT_MAX__
 
     cout << "Your array is " << endl;
     for(int i = 0; i < size; i++) {
