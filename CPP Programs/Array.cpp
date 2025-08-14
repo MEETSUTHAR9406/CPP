@@ -24,6 +24,7 @@ int main() {
     int arr[5];
     int size_sec = sizeof(arr) / sizeof(arr[0]);
 
+    // Array are static 
     for(int i = 0; i < size_sec; i++) {
         cout << "Enter value at index " << i + 1 << " ";
         cin >> arr[i];
