@@ -5,6 +5,8 @@ using namespace std;
 
 int main() {
 
+    // Remember! Vectors are dynamic.
+
     // vector<int> vec;
     // cout << vec[0];
 
