@@ -52,5 +52,8 @@ Currently, I have completed topics **up to Vectors** in C++.
 - Iterating through vectors (for loop, iterators)  
 - Basic vector operations (`size()`, `empty()`, `clear()`)  
 
+### Doing some *Leetcode* questions.
+- Did pair sum.
+
 # More coming soon...
 ---
