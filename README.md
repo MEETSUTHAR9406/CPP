@@ -3,6 +3,8 @@
 A repository documenting my journey of learning **C++ from scratch**, including exercises, examples, and concepts.  
 Currently, I have completed topics **up to Vectors** in C++.
 
+## My [*Leetcode*](https://leetcode.com/u/Meet_9406/) Profile 
+
 ---
 
 ## About
