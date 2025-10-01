@@ -4,18 +4,16 @@ using namespace std;
 
 int main() {
 
-    string str = "IVXLCDM";
-    int n = 7;
-
+    string valid = "IVXLCDM";
     string s;
 
     cout << "Enter your string: ";
-    getline(cin, str);
+    getline(cin, s);
 
     for(int i = 0; i < s.length(); i++) {
         bool isValid = false;
-        for(int j = 0; j < str.length(); j++) {
-            if(s[i] == str[j]) {
+        for(int j = 0; j < valid.length(); j++) {
+            if(s[i] == valid[j]) {
                 isValid = true;
                 break;
             } 
