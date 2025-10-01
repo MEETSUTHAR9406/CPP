@@ -2,62 +2,71 @@
 #include <vector>
 using namespace std;
 
-void sorted(vector<int>& arr) {
+void sort(vector<int>& nums) {
     int temp;
-    int n = arr.size();
+    int n = nums.size();
 
     for(int i = 0; i < n; i++) {
         for(int j = i + 1; j < n; j++) {
-            if(arr[i] > arr[j]) {
-                temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+            if(nums[i] > nums[j]) {
+                temp = nums[i];
+                nums[i] = nums[j];
+                nums[j] = temp;
             }
         }
-    }
-
-    cout << "\nSorted array:\n";
-
-    for(int i = 0; i < n; i++) {
-        cout << "arr[" << i << "]: " << arr[i] << endl;
     }
 }
 
-void majElement(vector<int> arr) {
-    int n = arr.size();
+void printSorted(vector<int>& nums) {
+    cout << "Sorted array is: " << endl;
+    for(int i = 0; i < nums.size(); i++) {
+        cout << "nums[" << i << "]: " << nums[i] << endl;
+    }
+}
+
+void isMajority(vector<int> nums) {
+    int n = nums.size();
+    bool found = false;
 
     for(int i = 0; i < n; i++) {
-        bool counted = false;
+        int count = 1;
 
-        for(int j = 0; j < i; j++) {
-            if(arr[i] == arr[j]) {
-                counted = true;
-                break;
+        for(int j = i + 1; j < n; j++) {
+            if(nums[i] == nums[j]) {
+                count++;
             }
         }
-        if(counted) continue;
 
-        int freq = 0;
-        for(int el : arr) {
-            if(el == arr[i]) {
-                freq++;
-            }
+        if(count > n / 2) {
+            cout << nums[i] << " is the majority element" << endl;
+            cout << "It appears " << count << " times" << endl;
+            found = true;
+            break;
         }
-        cout << arr[i] << " occurs " << freq << " times" << endl;
+    }
+
+    if(!found) {
+        cout << "No majority element found." << endl;
     }
 }
 
 int main() {
 
-    vector<int> arr(5);
+    int x;
 
-    for(int i = 0; i < arr.size(); i++) {
-        cout << "arr[" << i << "]: ";
-        cin >> arr[i];
+    cout << "Enter number of elements: ";
+    cin >> x;
+
+    vector<int> nums(x);
+    cout << "Enter elements: " << endl;
+    for(int i = 0; i < x; i++) {
+        cout << "nums[" << i << "]: ";
+        cin >> nums[i];
     }
 
-    sorted(arr);
-    majElement(arr);
+    sort(nums);
+    printSorted(nums);
+    isMajority(nums);
 
     return 0;
 }
