@@ -27,6 +27,5 @@ int main() {
     // ans = DectoBinary(num);
     // cout << "Decimal to binary of " << num << " is " << ans << endl;
 
-
     return 0;
 }
