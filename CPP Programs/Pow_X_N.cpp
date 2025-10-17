@@ -1,27 +1,33 @@
 #include <iostream>
 using namespace std;
 
-int toBin(int num) {
-    int ans = 0, pow = 1;
+double binExpo(double x, int n) {
+    long binForm = n;
+    double ans = 1;
 
-    while(num > 0) {
-        int digit = num % 2;
-        num /= 2;
-        ans += (digit * pow);
-        pow *= 10;
+    while(binForm > 0) {
+        if(binForm % 2 == 1) {
+            ans *= x;
+        }
+        x *= x;
+        binForm /= 2;
     }
     return ans;
 }
 
 int main() {
 
-    int num, ans;
+    double x;
+    int n;
 
     cout << "Enter the number: ";
-    cin >> num;
+    cin >> x;
 
-    ans = toBin(num);
-    cout << "Decimal to binary of " << num << " is " << ans << endl;
+    cout << "Enter the expo: ";
+    cin >> n;
+
+    double final_ans = binExpo(x, n);
+    cout << "The answer is: " << final_ans;
 
     return 0;
 }
